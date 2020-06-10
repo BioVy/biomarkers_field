@@ -20,15 +20,16 @@ dtInv.W = reshape(dtInv.L, idvar = c("SampleID","River", "Riv", "Region",'Taxon_
 
 colnames(dtInv.W) = c( "SampleID","River","Riv","Region","Taxon_ID","Hg","Fe","Co","Cu","Zn","Cd","Pb","As")
 
-
+e
 ### water dataset ###
 dtWater = read.csv("MetalcontaminationWater_Calc.csv", header = T)
 dtWater = dtWater[,c(3,4,5,13:30)] ##only keep concentrations in microM and TUs 
 
 ### Sediment dataset ###
-dtSed = read.csv("TSS-2018-EXP-03-Metals Sediment_Corrected_red.csv", header = T)
-dtSed = dtSed[,c(1:11)] ## only keep columns with concentrations in mmolperkgDS
-d
+dtSed = read.csv("dtSed_Calc.csv", header = T)
+head(dtSed)
+dtSed$X = NULL
+
 
 
 
