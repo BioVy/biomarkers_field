@@ -31,7 +31,9 @@ head(dtSed)
 dtSed$X = NULL
 
 
-
+### save all datasets in 1 object####
+dtfieldbiomarkers = list(dtFish,dtInv.L,dtInv.W,dtSed,dtWater)
+saveRDS(dtfieldbiomarkers, "dtfieldbiomarkers.RData")
 
 
 
